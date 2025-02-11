@@ -6,3 +6,5 @@ The primary goal is to play around with different types of public APIs and autom
 - **Pytest** for writing and executing automated test scripts
 - **Requests lib** for sending HTTP requests
 
+### Webistes used
+- **Mocky** https://designer.mocky.io/

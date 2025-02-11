@@ -1,0 +1,243 @@
+Full docs -> https://documenter.getpostman.com/view/4012288/TzK2bEa8#abe537df-fccc-4ee6-90d2-7513e3024d6b
+
+POST
+Add Contact
+https://thinking-tester-contact-list.herokuapp.com/contacts
+HEADERS: Authorization Bearer {{token}}
+
+Body raw (json)
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "birthdate": "1970-01-01",
+    "email": "jdoe@fake.com",
+    "phone": "8005555555",
+    "street1": "1 Main St.",
+    "street2": "Apartment A",
+    "city": "Anytown",
+    "stateProvince": "KS",
+    "postalCode": "12345",
+    "country": "USA"
+}
+
+
+Example req
+
+curl --location 'https://thinking-tester-contact-list.herokuapp.com/contacts' \
+--header 'Authorization: Bearer {{token}}' \
+--data-raw '{
+    "firstName": "John",
+    "lastName": "Doe",
+    "birthdate": "1970-01-01",
+    "email": "jdoe@fake.com",
+    "phone": "8005555555",
+    "street1": "1 Main St.",
+    "street2": "Apartment A",
+    "city": "Anytown",
+    "stateProvince": "KS",
+    "postalCode": "12345",
+    "country": "USA"
+}'
+
+Example response (201 created)
+
+{
+  "_id": "6085a221fcfc72405667c3d4",
+  "firstName": "John",
+  "lastName": "Doe",
+  "birthdate": "1970-01-01",
+  "email": "jdoe@fake.com",
+  "phone": "8005555555",
+  "street1": "1 Main St.",
+  "street2": "Apartment A",
+  "city": "Anytown",
+  "stateProvince": "KS",
+  "postalCode": "12345",
+  "country": "USA",
+  "owner": "6085a21efcfc72405667c3d4",
+  "__v": 0
+}
+
+
+GET
+Get Contact List; 
+HEADERS: Authorization Bearer {{token}}
+https://thinking-tester-contact-list.herokuapp.com/contacts
+
+
+Example req
+
+curl --location 'https://thinking-tester-contact-list.herokuapp.com/contacts' \
+--header 'Authorization: Bearer {{token}}'
+
+
+Example response (200 OK)
+[
+  {
+    "_id": "6085a221fcfc72405667c3d4",
+    "firstName": "John",
+    "lastName": "Doe",
+    "birthdate": "1970-01-01",
+    "email": "jdoe@fake.com",
+    "phone": "8005555555",
+    "street1": "1 Main St.",
+    "street2": "Apartment A",
+    "city": "Anytown",
+    "stateProvince": "KS",
+    "postalCode": "12345",
+    "country": "USA",
+    "owner": "6085a21efcfc72405667c3d4",
+    "__v": 0
+  },
+  {
+    "_id": "607b29861ba4d3a0b96733bc",
+    "firstName": "Jan",
+    "lastName": "Brady",
+    "birthdate": "2001-11-11",
+    "email": "fake2@gmail.com",
+    "phone": "8008675309",
+    "street1": "100 Elm St.",
+    "city": "Springfield",
+    "stateProvince": "NE",
+    "postalCode": "23456",
+    "country": "United States",
+    "owner": "6085a21efcfc72405667c3d4",
+    "__v": 0
+  }
+]
+
+GET
+Get Contact
+https://thinking-tester-contact-list.herokuapp.com/contacts/
+
+Example req
+
+curl --location 'https://thinking-tester-contact-list.herokuapp.com/contacts/' \
+--header 'Authorization: Bearer {{token}}'
+
+Example response (200 OK)
+{
+  "_id": "6085a221fcfc72405667c3d4",
+  "firstName": "John",
+  "lastName": "Doe",
+  "birthdate": "1970-01-01",
+  "email": "jdoe@fake.com",
+  "phone": "8005555555",
+  "street1": "1 Main St.",
+  "street2": "Apartment A",
+  "city": "Anytown",
+  "stateProvince": "KS",
+  "postalCode": "12345",
+  "country": "USA",
+  "owner": "6085a21efcfc72405667c3d4",
+  "__v": 0
+}
+
+PUT
+Update Contact
+https://thinking-tester-contact-list.herokuapp.com/contacts/
+
+Body raw json
+
+{
+    "firstName": "Amy",
+    "lastName": "Miller",
+    "birthdate": "1992-02-02",
+    "email": "amiller@fake.com",
+    "phone": "8005554242",
+    "street1": "13 School St.",
+    "street2": "Apt. 5",
+    "city": "Washington",
+    "stateProvince": "QC",
+    "postalCode": "A1A1A1",
+    "country": "Canada"
+}
+
+Example req
+
+curl --location --request PUT 'https://thinking-tester-contact-list.herokuapp.com/contacts/' \
+--header 'Authorization: Bearer {{token}}' \
+--data-raw '{
+    "firstName": "Amy",
+    "lastName": "Miller",
+    "birthdate": "1992-02-02",
+    "email": "amiller@fake.com",
+    "phone": "8005554242",
+    "street1": "13 School St.",
+    "street2": "Apt. 5",
+    "city": "Washington",
+    "stateProvince": "QC",
+    "postalCode": "A1B2D4",
+    "country": "Canada"
+}'
+
+Example response (200 OK)
+{
+    "_id": "6085a221fcfc72405667c3d4",
+    "firstName": "Amy",
+    "lastName": "Miller",
+    "birthdate": "1992-02-02",
+    "email": "amiller@fake.com",
+    "phone": "8005554242",
+    "street1": "13 School St.",
+    "street2": "Apt. 5",
+    "city": "Washington",
+    "stateProvince": "QC",
+    "postalCode": "A1A1A1",
+    "country": "Canada"
+    "owner": "6085a21efcfc72405667c3d4",
+    "__v": 0
+}
+
+PATCH
+Update Contact
+https://thinking-tester-contact-list.herokuapp.com/contacts/
+The PATCH Update Contact operation is not available through the UI.
+
+Body raw json
+{
+    "firstName": "Anna"
+}
+
+Example req
+
+curl --location --request PATCH 'https://thinking-tester-contact-list.herokuapp.com/contacts/' \
+--header 'Authorization: Bearer {{token}}' \
+--data '{
+    "firstName": "Anna"
+}'
+
+Example response (200 OK)
+
+{
+    "_id": "6085a221fcfc72405667c3d4",
+    "firstName": "Anna",
+    "lastName": "Miller",
+    "birthdate": "1992-02-02",
+    "email": "amiller@fake.com",
+    "phone": "8005554242",
+    "street1": "13 School St.",
+    "street2": "Apt. 5",
+    "city": "Washington",
+    "stateProvince": "QC",
+    "postalCode": "A1B2D4",
+    "country": "Canada"
+    "owner": "6085a21efcfc72405667c3d4",
+    "__v": 0
+}
+
+
+DELETE
+Delete Contact
+https://thinking-tester-contact-list.herokuapp.com/contacts/
+
+
+Example req
+
+curl --location --request DELETE 'https://thinking-tester-contact-list.herokuapp.com/contacts/' \
+--header 'Authorization: Bearer {{token}}'
+
+Example response (200 OK)
+
+Contact deleted

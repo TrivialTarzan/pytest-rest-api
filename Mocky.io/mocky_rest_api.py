@@ -28,9 +28,8 @@ def test_create_book():
     assert response_json["data"]["title"] == new_book["title"]
     assert response_json["data"]["genre"] == new_book["genre"]
 
-# Test PUT method (Update an existing book)
 def test_update_book():
-    book_id = 3  # Assume the book with id 3 exists
+    book_id = 3
     updated_data = {
         "price": 42.99,
         "available": False

@@ -12,17 +12,17 @@ The primary goal is to play around with different types of public APIs and autom
 
 ## Setup (Windows)
 
-### If you don't have a venv, create one
+##### If you don't have a venv, create one
 ```sh
 python -m venv venv
 ```
 
-### Now activate it
+##### Now activate it
 ```sh
 venv\Scripts\activate
 ```
 
-### And install dependencies 
+##### And install dependencies 
 ```sh
 pip install -r requirements.txt
 ```

@@ -6,9 +6,9 @@ Mocky:
     post: "fdb59946-d736-422d-9afd-a914f7fd42d8"
     update: "15d96d11-5e31-4e87-a1cc-64f6771f6960"
 
-google:
-  base_url: "https://www.googleapis.com"
-  token: "${GOOGLE_API_KEY}"
+Contact List:
+  base_url: "https://thinking-tester-contact-list.herokuapp.com"
+  token: ""
   endpoints:
     search: "/customsearch/v1"
     maps: "/maps/api/geocode/json"

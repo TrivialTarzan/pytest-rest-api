@@ -1,0 +1,15 @@
+Mocky:
+  base_url: "https://run.mocky.io/v3/"
+  token: None
+  endpoints:
+    get: "af807fa9-43a6-419f-a51e-962fe409a7b8"
+    post: "fdb59946-d736-422d-9afd-a914f7fd42d8"
+    update: "15d96d11-5e31-4e87-a1cc-64f6771f6960"
+
+google:
+  base_url: "https://www.googleapis.com"
+  token: "${GOOGLE_API_KEY}"
+  endpoints:
+    search: "/customsearch/v1"
+    maps: "/maps/api/geocode/json"
+

@@ -1,3 +1,19 @@
+Contact List:
+  base_url: "https://thinking-tester-contact-list.herokuapp.com"
+  token: "Bearer {{token}}"
+  endpoints:
+    add_contact: "/contacts"
+    add_user: "/users"
+    get_contact_list: "/contacts"
+    get_contact: "/contacts/"
+    get_user_profile: "/users/me"
+    patch_contact: "/contacts/"
+    patch_user: "/users/me"
+    login_user: "/users/login"
+    logout_user: "/users/logout"
+    delete_contact: "/contacts/"
+    delete_user: "/users/me"
+
 Mocky:
   base_url: "https://run.mocky.io/v3/"
   token: None
@@ -6,13 +22,4 @@ Mocky:
     post: "fdb59946-d736-422d-9afd-a914f7fd42d8"
     update: "15d96d11-5e31-4e87-a1cc-64f6771f6960"
 
-Contact List:
-  base_url: "https://thinking-tester-contact-list.herokuapp.com"
-  token: "Bearer {{token}}"
-  endpoints:
-    add_contact: "/contacts"
-    get_contact_list: "/contacts"
-    get_contact: "/contacts/"
-    patch_contact: "/contacts/"
-    delete_contact: "/contacts/"
 

@@ -1,8 +1,27 @@
 import pytest
 import requests
+from config.config_loader import load_config
 
-url = "https://thinking-tester-contact-list.herokuapp.com/contacts"
-token = ""
+@pytest.fixture
+def base_url():
+    return load_config['Contact List']['base_url']
+
+@pytest.fixture
+def token():
+    return load_config['Contact List']['token']
+
+@pytest.fixture
+def endpoints():
+    return load_config['Contact List']['endpoints']
+
+def test_example(base_url, token, endpoints):
+    print(f"Base URL: {base_url}")
+    print(f"Token: {token}")
+    print(f"Endpoints: {endpoints}")
+
+    # Możesz teraz używać tych zmiennych w testach, np.:
+    assert base_url == "https://thinking-tester-contact-list.herokuapp.com"
+    assert endpoints['add_contact'] == "/contacts"
 
 headers = {
     "Authorization": f"Bearer {token}",

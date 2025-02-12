@@ -1,5 +1,15 @@
 # API Documentation
 
+## My user
+```json
+{
+    "firstName": "Izabela",
+    "lastName": "MonteMniam",
+    "email": "iza@facts.com",
+    "password": "sha1sha2"
+}
+```
+
 ## POST - Add Contact
 
 ### Endpoint

@@ -1,4 +1,4 @@
-Contact List:
+ContactList:
   base_url: "https://thinking-tester-contact-list.herokuapp.com"
   token: "Bearer {{token}}"
   endpoints:
@@ -13,6 +13,12 @@ Contact List:
     logout_user: "/users/logout"
     delete_contact: "/contacts/"
     delete_user: "/users/me"
+  first_user:
+    token: "Bearer {{token}}"
+    first_name: Izabela
+    last_name: MonteMniam
+    email: iza@facts.com
+    password: sha1sha2
 
 Mocky:
   base_url: "https://run.mocky.io/v3/"

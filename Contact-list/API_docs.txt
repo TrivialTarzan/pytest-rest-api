@@ -40,6 +40,22 @@ curl --location 'https://thinking-tester-contact-list.herokuapp.com/contacts' \
     "country": "USA"
 }'
 
+PYTHON req
+--------------------
+import requests
+
+url = "https://thinking-tester-contact-list.herokuapp.com/contacts"
+
+payload = "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"birthdate\": \"1970-01-01\",\n    \"email\": \"jdoe@fake.com\",\n    \"phone\": \"8005555555\",\n    \"street1\": \"1 Main St.\",\n    \"street2\": \"Apartment A\",\n    \"city\": \"Anytown\",\n    \"stateProvince\": \"KS\",\n    \"postalCode\": \"12345\",\n    \"country\": \"USA\"\n}"
+headers = {
+  'Authorization': 'Bearer {{token}}'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+--------------------
+
 Example response (201 created)
 
 {
@@ -70,6 +86,22 @@ Example req
 
 curl --location 'https://thinking-tester-contact-list.herokuapp.com/contacts' \
 --header 'Authorization: Bearer {{token}}'
+
+------------
+PYTHON
+import requests
+
+url = "https://thinking-tester-contact-list.herokuapp.com/contacts"
+
+payload={}
+headers = {
+  'Authorization': 'Bearer {{token}}'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+------------
 
 
 Example response (200 OK)
@@ -115,6 +147,22 @@ Example req
 
 curl --location 'https://thinking-tester-contact-list.herokuapp.com/contacts/' \
 --header 'Authorization: Bearer {{token}}'
+
+--------------
+PYTHON
+import requests
+
+url = "https://thinking-tester-contact-list.herokuapp.com/contacts/"
+
+payload={}
+headers = {
+  'Authorization': 'Bearer {{token}}'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+-------------
 
 Example response (200 OK)
 {
@@ -172,6 +220,23 @@ curl --location --request PUT 'https://thinking-tester-contact-list.herokuapp.co
     "country": "Canada"
 }'
 
+--------------
+PYTHON
+import requests
+
+url = "https://thinking-tester-contact-list.herokuapp.com/contacts/"
+
+payload = "{\n    \"firstName\": \"Amy\",\n    \"lastName\": \"Miller\",\n    \"birthdate\": \"1992-02-02\",\n    \"email\": \"amiller@fake.com\",\n    \"phone\": \"8005554242\",\n    \"street1\": \"13 School St.\",\n    \"street2\": \"Apt. 5\",\n    \"city\": \"Washington\",\n    \"stateProvince\": \"QC\",\n    \"postalCode\": \"A1B2D4\",\n    \"country\": \"Canada\"\n}"
+headers = {
+  'Authorization': 'Bearer {{token}}'
+}
+
+response = requests.request("PUT", url, headers=headers, data=payload)
+
+print(response.text)
+--------------
+
+
 Example response (200 OK)
 {
     "_id": "6085a221fcfc72405667c3d4",
@@ -208,6 +273,23 @@ curl --location --request PATCH 'https://thinking-tester-contact-list.herokuapp.
     "firstName": "Anna"
 }'
 
+---------------
+PYTHON
+import requests
+
+url = "https://thinking-tester-contact-list.herokuapp.com/contacts/"
+
+payload = "{\n    \"firstName\": \"Anna\"\n}"
+headers = {
+  'Authorization': 'Bearer {{token}}'
+}
+
+response = requests.request("PATCH", url, headers=headers, data=payload)
+
+print(response.text)
+----------------
+
+
 Example response (200 OK)
 
 {
@@ -238,6 +320,227 @@ Example req
 curl --location --request DELETE 'https://thinking-tester-contact-list.herokuapp.com/contacts/' \
 --header 'Authorization: Bearer {{token}}'
 
+-----------------
+PYTHON
+import requests
+
+url = "https://thinking-tester-contact-list.herokuapp.com/contacts/"
+
+payload={}
+headers = {
+  'Authorization': 'Bearer {{token}}'
+}
+
+response = requests.request("DELETE", url, headers=headers, data=payload)
+
+print(response.text)
+------------------
+
 Example response (200 OK)
 
 Contact deleted
+
+
+POST
+Add User
+https://thinking-tester-contact-list.herokuapp.com/users
+
+Body raw (json)
+
+{
+    "firstName": "Test",
+    "lastName": "User",
+    "email": "test@fake.com",
+    "password": "myPassword"
+}
+
+Example Request
+import requests
+
+url = "https://thinking-tester-contact-list.herokuapp.com/users"
+
+payload = "{\n    \"firstName\": \"Test\",\n    \"lastName\": \"User\",\n    \"email\": \"test@fake.com\",\n    \"password\": \"myPassword\"\n}"
+headers = {
+  'Authorization': 'Bearer {{token}}'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+
+Example Response
+
+{
+  "user": {
+    "_id": "608b2db1add2691791c04c89",
+    "firstName": "Test",
+    "lastName": "User",
+    "email": "test@fake.com",
+    "__v": 1
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDhiMmRiMWFkZDI2OTE3OTFjMDRjODgiLCJpYXQiOjE2MTk3MzM5Mzd9.06wN8dRBLkFiS_m2XdY6h4oLx3nMeupHvv-3C2AEKlY"
+}
+
+
+GET
+Get User Profile
+https://thinking-tester-contact-list.herokuapp.com/users/me
+The GET User Profile operation is not available through the UI.
+
+Example Request
+import requests
+
+url = "https://thinking-tester-contact-list.herokuapp.com/users/me"
+
+payload={}
+headers = {
+  'Authorization': 'Bearer {{token}}'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+
+
+Example response
+
+{
+  "_id": "608b2db1add2691791c04c89",
+  "firstName": "Test",
+  "lastName": "User",
+  "email": "test@fake.com",
+  "__v": 1
+}
+
+PATCH
+Update User
+https://thinking-tester-contact-list.herokuapp.com/users/me
+The PATCH Update User operation is not available through the UI.
+
+
+Body raw (json)
+{
+    "firstName": "Updated",
+    "lastName": "Username",
+    "email": "test2@fake.com",
+    "password": "myNewPassword"
+}
+
+Example Request
+
+import requests
+
+url = "https://thinking-tester-contact-list.herokuapp.com/users/me"
+
+payload = "{\n    \"firstName\": \"Updated\",\n    \"lastName\": \"Username\",\n    \"email\": \"test2@fake.com\",\n    \"password\": \"myNewPassword\"\n}"
+headers = {
+  'Authorization': 'Bearer {{token}}'
+}
+
+response = requests.request("PATCH", url, headers=headers, data=payload)
+
+print(response.text)
+
+Example Response
+
+{
+  "_id": "608b2db1add2691791c04c89",
+  "firstName": "Updated",
+  "lastName": "Username",
+  "email": "test2@fake.com",
+  "__v": 1
+}
+
+
+POST
+Log Out User
+https://thinking-tester-contact-list.herokuapp.com/users/logout
+
+
+Example req
+import requests
+
+url = "https://thinking-tester-contact-list.herokuapp.com/users/logout"
+
+payload={}
+headers = {
+  'Authorization': 'Bearer {{token}}'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+
+Example Response
+
+No response body
+This request doesn't return any response body
+
+
+POST
+Log In User
+https://thinking-tester-contact-list.herokuapp.com/users/login
+
+
+Body Raw JSON
+
+{
+    "email": "test2@fake.com",
+    "password": "myNewPassword"
+}
+
+Example Request
+
+import requests
+
+url = "https://thinking-tester-contact-list.herokuapp.com/users/login"
+
+payload = "{\n    \"email\": \"test2@fake.com\",\n    \"password\": \"myNewPassword\"\n}"
+headers = {}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+
+
+Example Response
+
+{
+  "user": {
+    "_id": "608b2db1add2691791c04c89",
+    "firstName": "Updated",
+    "lastName": "Username",
+    "email": "test2@fake.com",
+    "__v": 212
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgyMWYzMDYyZmJiMjEzZTJhZDlhMjAiLCJpYXQiOjE2MTk3MzQ0NDB9.4CftGzYRmK04PJv6xKqmWWo9iOH2wlizEU8vk-L48LI"
+}
+
+DELETE
+Delete User
+https://thinking-tester-contact-list.herokuapp.com/users/me
+The DELETE User operation is not available through the UI.
+
+
+Example Request
+
+import requests
+
+url = "https://thinking-tester-contact-list.herokuapp.com/users/me"
+
+payload={}
+headers = {
+  'Authorization': 'Bearer {{token}}'
+}
+
+response = requests.request("DELETE", url, headers=headers, data=payload)
+
+print(response.text)
+
+
+Example Response
+
+(200 OK)
+
+No response body
+This request doesn't return any response body

@@ -8,8 +8,11 @@ Mocky:
 
 Contact List:
   base_url: "https://thinking-tester-contact-list.herokuapp.com"
-  token: ""
+  token: "Bearer {{token}}"
   endpoints:
-    search: "/customsearch/v1"
-    maps: "/maps/api/geocode/json"
+    add_contact: "/contacts"
+    get_contact_list: "/contacts"
+    get_contact: "/contacts/"
+    patch_contact: "/contacts/"
+    delete_contact: "/contacts/"
 

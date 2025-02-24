@@ -1,7 +1,6 @@
 .pytest_cache
 __pycache__
 
-Contact-list/dektop.ini
 .idea
 venv
-Mocky.io/desktop.ini
+desktop.ini

@@ -28,24 +28,6 @@ contact_state = config.contact1_state()
 contact_postal_code = config.contact1_postal_code()
 contact_country = config.contact1_country()
 
-headers = {
-    "Authorization": f"Bearer {token}",
-    "Content-Type": "application/json"
-}
-
-body = {
-    "firstName": "John",
-    "lastName": "Doe",
-    "birthdate": "1970-01-01",
-    "email": "korwin-mikke@what.com",
-    "phone": "666",
-    "street1": "1 Hubris St.",
-    "street2": "Apartment SS",
-    "city": "Anytown",
-    "stateProvince": "KS",
-    "postalCode": "12345",
-    "country": "PL"
-}
 
 def test_login(api_client, endpoint, email, password, first_name, last_name, id):
     global bearer

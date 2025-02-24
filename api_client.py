@@ -1,6 +1,6 @@
 import requests
 import pytest
-from config.config_loader import load
+from config.config_loader import ConfigLoader
 
 # def base_url():
 #     return load_config['Contact List']['base_url']
@@ -8,7 +8,7 @@ from config.config_loader import load
 class ApiClient:
     def __init__(self):
         self.client = ''
-        self.config = load()
+        self.config = ConfigLoader.load()
         self.BASE_URL = self.config['Mocky' if self.client == 'Mocky' else 'ContactList']['base_url']
     
     def set_client(self, client):

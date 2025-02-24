@@ -1,35 +1,54 @@
 import requests
-import pytest
+from requests import Response
 from config.config_loader import ConfigLoader
 
-# def base_url():
-#     return load_config['Contact List']['base_url']
 
 class ApiClient:
-    def __init__(self):
-        self.client = ''
+    def __init__(self, client: str = 'ContactList'):
+        self.client = client
         self.config = ConfigLoader.load()
-        self.BASE_URL = self.config['Mocky' if self.client == 'Mocky' else 'ContactList']['base_url']
+        self.BASE_URL = self.config[self.client]['base_url']
     
-    def set_client(self, client):
-        self.client = client     
+    def set_client(self, client: str):
+        self.client = client
+        self.BASE_URL = self.config[self.client]['base_url']
         
-    def get(self, endpoint, params=None):
+    def get(self, endpoint: str, params: dict = None) -> Response:
         url = f"{self.BASE_URL}{endpoint}"
-        response = requests.get(url, params=params)
+        try:
+            response = requests.get(url, params=params)
+            response.raise_for_status()
+        except requests.RequestException as e:
+            print(f"GET request failed: {e}")
+            raise
         return response
 
-    def post(self, endpoint, headers={}, payload={}):
+    def post(self, endpoint: str, headers: dict = {}, payload: dict = {}) -> Response:
         url = f"{self.BASE_URL}{endpoint}"
-        response = requests.post(url, headers=headers, json=payload)
+        try:
+            response = requests.post(url, headers=headers, json=payload)
+            response.raise_for_status()
+        except requests.RequestException as e:
+            print(f"POST request failed: {e}")
+            raise
         return response
 
-    def put(self, endpoint, data=None):
+    def put(self, endpoint: str, data: dict = None) -> Response:
         url = f"{self.BASE_URL}{endpoint}"
-        response = requests.put(url, json=data)
+        try:
+            response = requests.put(url, json=data)
+            response.raise_for_status()
+        except requests.RequestException as e:
+            print(f"PUT request failed: {e}")
+            raise
         return response
 
-    def delete(self, endpoint):
+    def delete(self, endpoint: str) -> Response:
         url = f"{self.BASE_URL}{endpoint}"
-        response = requests.delete(url)
+        try:
+            response = requests.delete(url)
+            response.raise_for_status()
+        except requests.RequestException as e:
+            print(f"DELETE request failed: {e}")
+            raise
         return response

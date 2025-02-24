@@ -21,7 +21,7 @@ def test_create_book():
         "price": "45.99"
     }
     response = requests.post(f"{BASE_URL}/v3/fdb59946-d736-422d-9afd-a914f7fd42d8", json=new_book)
-    assert response.status_code == 201 # 201 == creation
+    assert response.status_code == 201
     response_json = response.json()
     assert response_json["status"] == "success"
     assert response_json["message"] == "Book created successfully"
@@ -42,13 +42,4 @@ def test_update_book():
     assert response_json["message"] == "Book updated successfully"
     assert response_json["data"]["price"] == updated_data["price"]
     assert response_json["data"]["available"] == updated_data["available"]
-
-# Test DELETE method (Delete an existing book)
-# def test_delete_book():
-#     book_id = 3  # Assume the book with id 3 exists
-#     response = requests.delete(f"{BASE_URL}/books/{book_id}")
-#     assert response.status_code == 200
-#     response_json = response.json()
-#     assert response_json["status"] == "success"
-#     assert response_json["message"] == "Book deleted successfully"
 

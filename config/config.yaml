@@ -14,13 +14,13 @@ ContactList:
     delete_contact: "/contacts/"
     delete_user: "/users/me"
   first_user:
-    # token: "Bearer {{token}}"
-    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2FjOTdiZjM5ZTY5MzAwMTNkNTIyODkiLCJpYXQiOjE3NDA0MDQwOTF9.ToP9gYagECY3mT2rAFaxsmzoDZvzVUhTVfN6jzSpLLk"
-    first_name: "Izabela"
-    last_name: "MonteMniam"
-    email: "iza@facts.com"
-    password: "sha1sha2"
-    id: "67ac97bf39e6930013d52289"
+    token: "${TOKEN}"
+    first_name: "${FIRST_NAME}"
+    last_name: "${LAST_NAME}"
+    email: "${EMAIL}"
+    password: "${PASSWORD}"
+    id: "${ID}"
+
   contact1:
     first_name: "Janusz"
     last_name: "Korwin-Mikke"

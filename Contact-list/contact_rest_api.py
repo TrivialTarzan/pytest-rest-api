@@ -43,7 +43,7 @@ body = {
 }
 
 def test_add_contact():
-    response = requests.post(url, json=body, headers=headers)
+    response = requests.post(base_url, json=body, headers=headers)
 
     assert response.status_code == 201
     

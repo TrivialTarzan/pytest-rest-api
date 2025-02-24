@@ -1,10 +1,9 @@
 import requests
-from requests import Response
 from config.config_loader import ConfigLoader
 
 
 class ApiClient:
-    def __init__(self, client: str = 'ContactList'):
+    def __init__(self, client = 'ContactList'):
         self.client = client
         self.config = ConfigLoader.load()
         self.BASE_URL = self.config[self.client]['base_url']
@@ -13,7 +12,7 @@ class ApiClient:
         self.client = client
         self.BASE_URL = self.config[self.client]['base_url']
         
-    def get(self, endpoint: str, params: dict = None) -> Response:
+    def get(self, endpoint: str, params: dict = None):
         url = f"{self.BASE_URL}{endpoint}"
         try:
             response = requests.get(url, params=params)
@@ -23,7 +22,7 @@ class ApiClient:
             raise
         return response
 
-    def post(self, endpoint: str, headers: dict = {}, payload: dict = {}) -> Response:
+    def post(self, endpoint: str, headers = {}, payload = {}):
         url = f"{self.BASE_URL}{endpoint}"
         try:
             response = requests.post(url, headers=headers, json=payload)
@@ -33,7 +32,7 @@ class ApiClient:
             raise
         return response
 
-    def put(self, endpoint: str, data: dict = None) -> Response:
+    def put(self, endpoint: str, data: dict = None):
         url = f"{self.BASE_URL}{endpoint}"
         try:
             response = requests.put(url, json=data)
@@ -43,7 +42,7 @@ class ApiClient:
             raise
         return response
 
-    def delete(self, endpoint: str) -> Response:
+    def delete(self, endpoint: str):
         url = f"{self.BASE_URL}{endpoint}"
         try:
             response = requests.delete(url)

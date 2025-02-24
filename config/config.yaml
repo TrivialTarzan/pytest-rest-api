@@ -14,11 +14,13 @@ ContactList:
     delete_contact: "/contacts/"
     delete_user: "/users/me"
   first_user:
-    token: "Bearer {{token}}"
-    first_name: Izabela
-    last_name: MonteMniam
-    email: iza@facts.com
-    password: sha1sha2
+    # token: "Bearer {{token}}"
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2FjOTdiZjM5ZTY5MzAwMTNkNTIyODkiLCJpYXQiOjE3NDA0MDQwOTF9.ToP9gYagECY3mT2rAFaxsmzoDZvzVUhTVfN6jzSpLLk"
+    first_name: "Izabela"
+    last_name: "MonteMniam"
+    email: "iza@facts.com"
+    password: "sha1sha2"
+    id: "67ac97bf39e6930013d52289"
 
 Mocky:
   base_url: "https://run.mocky.io/v3/"

@@ -1,3 +1,9 @@
+"""
+This file serves as a testing ground for experimenting with different functions and classes 
+before integrating them into the actual test files
+"""
+
+
 from config.config_loader import load
 from api_client import ApiClient
 import requests

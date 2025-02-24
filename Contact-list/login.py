@@ -7,12 +7,9 @@ from config.config_loader import ConfigLoader
 from api_client import ApiClient
 
 config = ConfigLoader()
-bearer = None
 
 
 def test_login(api_client, endpoint, email, password, first_name, last_name, id):
-    global bearer
-    
     payload = {
         "email": email, 
         "password": password
@@ -24,7 +21,6 @@ def test_login(api_client, endpoint, email, password, first_name, last_name, id)
     assert response.status_code == 200
     
     data = response.json()['user']
-    bearer = response.json()['token']
     
     assert data['email'] == email
     assert data['firstName'] == first_name
@@ -47,7 +43,8 @@ email = config.email()
 password = config.password()
 first_name = config.first_name()
 last_name = config.last_name()
-id = config.id() 
+id = config.id()
+token = config.token() 
     
 test_login(api_client, endpoint, email, password, first_name, last_name, id)
-test_logout(api_client, endpoint, bearer)    
+test_logout(api_client, endpoint, token)    

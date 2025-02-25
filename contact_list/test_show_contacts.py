@@ -38,7 +38,6 @@ def user_credentials(config):
         "password": config.password(),
         "first_name": config.first_name(),
         "last_name": config.last_name(),
-        "token": config.token(),
         "_id": config.id()
     }
 
@@ -73,7 +72,7 @@ def test_login(api_client, endpoint_login, user_credentials):
     
     data = response.json()['user']
     print(data)
-    bearer = data['token']
+    bearer = response.json()['token']
     
     assert data['email'] == user_credentials["email"]
     assert data['firstName'] == user_credentials["first_name"]
@@ -136,7 +135,7 @@ def test_get_contact_list(api_client, endpoint_get_contact_list, user_credential
 def test_logout(api_client, endpoint_logout, user_credentials):
     payload = {}
     headers = {
-        'Authorization': f'Bearer {user_credentials[bearer]}'
+        'Authorization': f'Bearer {bearer}'
     }
     
     api_client.post(endpoint_logout, headers, payload)

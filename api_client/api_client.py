@@ -42,10 +42,10 @@ class ApiClient:
             raise
         return response
 
-    def delete(self, endpoint: str):
+    def delete(self, endpoint: str, headers = {}):
         url = f"{self.BASE_URL}{endpoint}"
         try:
-            response = requests.delete(url)
+            response = requests.delete(url, headers=headers)
             response.raise_for_status()
         except requests.RequestException as e:
             print(f"DELETE request failed: {e}")

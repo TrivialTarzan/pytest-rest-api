@@ -43,6 +43,9 @@ class ConfigLoader:
     def endpoint_logout(self) -> str:
         return self.config['ContactList']['endpoints']['logout_user']
     
+    def endpoint_delete_contact(self) -> str:
+        return self.config['ContactList']['endpoints']['delete_contact']
+    
     def endpoint_add_contact(self) -> str:
         return self.config['ContactList']['endpoints']['add_contact']
     

@@ -33,13 +33,16 @@ class ConfigLoader:
         return self.config_protected['my_user']['last_name']
     
     def id(self) -> str:
-        return self.config_protected['my_user']['id']
+        return self.config_protected['my_user']['_id']
     
     def token(self) -> str:
         return self.config_protected['my_user']['token']
     
     def endpoint_login(self) -> str:
         return self.config['ContactList']['endpoints']['login_user']
+    
+    def endpoint_logout(self) -> str:
+        return self.config['ContactList']['endpoints']['logout_user']
     
     def endpoint_add_contact(self) -> str:
         return self.config['ContactList']['endpoints']['add_contact']

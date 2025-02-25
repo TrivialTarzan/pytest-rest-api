@@ -15,8 +15,16 @@ def api_client():
     return ApiClient()
 
 @pytest.fixture(scope="module")
-def endpoint(config):
+def endpoint_login(config):
     return config.endpoint_login()
+
+@pytest.fixture(scope="module")
+def endpoint_add_contact(config):
+    return config.endpoint_add_contact()
+
+@pytest.fixture(scope="module")
+def endpoint_logout(config):
+    return config.endpoint_logout()
 
 @pytest.fixture(scope="module")
 def user_credentials(config):
@@ -26,7 +34,7 @@ def user_credentials(config):
         "first_name": config.first_name(),
         "last_name": config.last_name(),
         "token": config.token(),
-        "id": config.id()
+        "_id": config.id()
     }
 
 @pytest.fixture(scope="module")
@@ -45,7 +53,7 @@ def contact_details(config):
         "country": config.contact1_country()
     }
 
-def test_login(api_client, endpoint, user_credentials):
+def test_login(api_client, endpoint_login, user_credentials):
     global bearer
     
     payload = {
@@ -54,7 +62,7 @@ def test_login(api_client, endpoint, user_credentials):
     }
     headers = {}
 
-    response = api_client.post(endpoint, headers, payload)
+    response = api_client.post(endpoint_login, headers, payload)
     print("Response Status Code:", response.status_code)
     assert response.status_code == 200
     
@@ -63,9 +71,9 @@ def test_login(api_client, endpoint, user_credentials):
     assert data['email'] == user_credentials["email"]
     assert data['firstName'] == user_credentials["first_name"]
     assert data['lastName'] == user_credentials["last_name"]
-    assert data['_id'] == user_credentials["id"]
+    assert data['_id'] == user_credentials["_id"]
 
-def test_add_contact(api_client, endpoint, contact_details, user_credentials):
+def test_add_contact(api_client, endpoint_add_contact, contact_details, user_credentials):
     payload = {
         "firstName": contact_details["first_name"],
         "lastName": contact_details["last_name"],
@@ -84,7 +92,7 @@ def test_add_contact(api_client, endpoint, contact_details, user_credentials):
         'Authorization': f'Bearer {user_credentials["token"]}'
     }
         
-    response = api_client.post(endpoint, headers, payload)
+    response = api_client.post(endpoint_add_contact, headers, payload)
     
     response_json = response.json()
 
@@ -104,10 +112,10 @@ def test_add_contact(api_client, endpoint, contact_details, user_credentials):
     assert "_id" in response_json
     assert "owner" in response_json
 
-def test_logout(api_client, endpoint, user_credentials):
+def test_logout(api_client, endpoint_logout, user_credentials):
     payload = {}
     headers = {
         'Authorization': f'Bearer {user_credentials["token"]}'
     }
     
-    api_client.post(endpoint, headers, payload)
+    api_client.post(endpoint_logout, headers, payload)

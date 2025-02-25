@@ -4,7 +4,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from config.config_loader import ConfigLoader
-from api_client import ApiClient
+from api_client.api_client import ApiClient
 
 config = ConfigLoader()
 

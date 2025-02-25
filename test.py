@@ -5,7 +5,7 @@ before integrating them into the actual test files
 
 
 from config.config_loader import load
-from api_client import ApiClient
+from api_client.api_client import ApiClient
 import requests
 
 config = load()

@@ -5,7 +5,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from config.config_loader import ConfigLoader
-from api_client import ApiClient
+from api_client.api_client import ApiClient
 
 config = ConfigLoader()
 api_client = ApiClient()
@@ -28,6 +28,41 @@ contact_state = config.contact1_state()
 contact_postal_code = config.contact1_postal_code()
 contact_country = config.contact1_country()
 
+@pytest.fixture
+def config():
+    return ConfigLoader()
+
+@pytest.fixture
+def api_client():
+    return ApiClient()
+
+@pytest.fixture
+def endpoint(config):
+    return config.endpoint()
+
+@pytest.fixture
+def email(config):
+    return config.email()
+
+@pytest.fixture
+def password(config):
+    return config.password()
+
+@pytest.fixture
+def first_name(config):
+    return config.first_name()
+
+@pytest.fixture
+def last_name(config):
+    return config.last_name()
+
+@pytest.fixture
+def id(config):
+    return config.id()
+
+@pytest.fixture
+def token(config):
+    return config.token()
 
 def test_login(api_client, endpoint, email, password, first_name, last_name, id):
     global bearer

@@ -27,4 +27,5 @@ headers = {}
 
 response = api_client.post(endpoint, headers, payload)
 print("Response Status Code:", response.status_code)
+print(response.json())
 assert response.status_code == 200

@@ -12,10 +12,10 @@ class ApiClient:
         self.client = client
         self.BASE_URL = self.config[self.client]['base_url']
         
-    def get(self, endpoint: str, params: dict = None):
+    def get(self, endpoint: str, headers = {}, payload = {}):
         url = f"{self.BASE_URL}{endpoint}"
         try:
-            response = requests.get(url, params=params)
+            response = requests.get(url, headers=headers, data=payload)
             response.raise_for_status()
         except requests.RequestException as e:
             print(f"GET request failed: {e}")

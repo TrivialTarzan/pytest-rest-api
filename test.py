@@ -15,17 +15,29 @@ config = ConfigLoader()
 
 api_client = ApiClient()
 url = "https://thinking-tester-contact-list.herokuapp.com"
-endpoint = config.endpoint_login()
+endpoint_login = config.endpoint_login()
+endpoint_get_list = config.endpoint_get_contact_list()
 email = config.email()
 password = config.password()
+token = config.token()
 
-payload = {
+payload_login = {
     "email": email, 
     "password": password
 }
-headers = {}
+headers_login = {}
 
-response = api_client.post(endpoint, headers, payload)
+response_login = api_client.post(endpoint_login, headers_login, payload_login)
+print("Response Status Code:", response_login.status_code)
+print(response_login.json())
+assert response_login.status_code == 200
+
+payload_get_list = {}
+headers_get_list = {
+    'Authorization': f'Bearer {token}'
+}
+print(token)
+response = api_client.get(endpoint_get_list, headers_get_list, payload_get_list)
 print("Response Status Code:", response.status_code)
 print(response.json())
 assert response.status_code == 200

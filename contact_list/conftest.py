@@ -2,6 +2,11 @@ import pytest
 from config.config_loader import ConfigLoader
 from api_client.api_client import ApiClient
 
+'''
+The fixtures are defined in the conftest.py file and can be used in any test file 
+by passing them as arguments to the test functions.
+'''
+
 @pytest.fixture(scope="module")
 def config():
     return ConfigLoader()

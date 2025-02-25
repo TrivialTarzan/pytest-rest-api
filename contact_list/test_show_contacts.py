@@ -26,7 +26,7 @@ def test_login(api_client, endpoint_login, user_credentials):
     assert data['_id'] == user_credentials["_id"]
 
 
-def test_get_contact_list(api_client, endpoint_get_contact_list, user_credentials):
+def test_get_contact_list(api_client, endpoint_get_contact_list):
     payload = {}
     headers = {
         'Authorization': f'Bearer {bearer}'
@@ -40,7 +40,7 @@ def test_get_contact_list(api_client, endpoint_get_contact_list, user_credential
     assert data[0]['lastName'].startswith('Gonz'), f"Expected last name to start with 'Gonz', but got {data[0]['lastName']}"
 
 
-def test_logout(api_client, endpoint_logout, user_credentials):
+def test_logout(api_client, endpoint_logout):
     payload = {}
     headers = {
         'Authorization': f'Bearer {bearer}'

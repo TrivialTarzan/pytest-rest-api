@@ -25,19 +25,19 @@ def test_login(api_client, endpoint_login, user_credentials):
     assert data['lastName'] == user_credentials["last_name"]
     assert data['_id'] == user_credentials["_id"]
 
-def test_add_contact(api_client, endpoint_add_contact, contact_details, user_credentials):
+def test_add_contact(api_client, endpoint_add_contact, contact_details_1):
     payload = {
-        "firstName": contact_details["first_name"],
-        "lastName": contact_details["last_name"],
-        "birthdate": contact_details["birthdate"],
-        "email": contact_details["email"],
-        "phone": contact_details["phone"],
-        "street1": contact_details["street1"],
-        "street2": contact_details["street2"],
-        "city": contact_details["city"],
-        "stateProvince": contact_details["state"],
-        "postalCode": contact_details["postal_code"],
-        "country": contact_details["country"]
+        "firstName": contact_details_1["first_name"],
+        "lastName": contact_details_1["last_name"],
+        "birthdate": contact_details_1["birthdate"],
+        "email": contact_details_1["email"],
+        "phone": contact_details_1["phone"],
+        "street1": contact_details_1["street1"],
+        "street2": contact_details_1["street2"],
+        "city": contact_details_1["city"],
+        "stateProvince": contact_details_1["state"],
+        "postalCode": contact_details_1["postal_code"],
+        "country": contact_details_1["country"]
     }
 
     headers = {
@@ -49,17 +49,17 @@ def test_add_contact(api_client, endpoint_add_contact, contact_details, user_cre
     response_json = response.json()
 
     assert response.status_code == 201
-    assert response_json["firstName"] == contact_details["first_name"]
-    assert response_json["lastName"] == contact_details["last_name"]
-    assert response_json["birthdate"] == contact_details["birthdate"]
-    assert response_json["email"] == contact_details["email"]
-    assert response_json["phone"] == contact_details["phone"]
-    assert response_json["street1"] == contact_details["street1"]
-    assert response_json["street2"] == contact_details["street2"]
-    assert response_json["city"] == contact_details["city"]
-    assert response_json["stateProvince"] == contact_details["state"]
-    assert response_json["postalCode"] == contact_details["postal_code"]
-    assert response_json["country"] == contact_details["country"]
+    assert response_json["firstName"] == contact_details_1["first_name"]
+    assert response_json["lastName"] == contact_details_1["last_name"]
+    assert response_json["birthdate"] == contact_details_1["birthdate"]
+    assert response_json["email"] == contact_details_1["email"]
+    assert response_json["phone"] == contact_details_1["phone"]
+    assert response_json["street1"] == contact_details_1["street1"]
+    assert response_json["street2"] == contact_details_1["street2"]
+    assert response_json["city"] == contact_details_1["city"]
+    assert response_json["stateProvince"] == contact_details_1["state"]
+    assert response_json["postalCode"] == contact_details_1["postal_code"]
+    assert response_json["country"] == contact_details_1["country"]
 
     assert "_id" in response_json
     assert "owner" in response_json

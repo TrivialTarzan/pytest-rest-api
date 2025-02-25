@@ -37,7 +37,7 @@ def user_credentials(config):
     }
 
 @pytest.fixture(scope="module")
-def contact_details(config):
+def contact_details_1(config):
     return {
         "first_name": config.contact1_first_name(),
         "last_name": config.contact1_last_name(),
@@ -51,3 +51,19 @@ def contact_details(config):
         "postal_code": config.contact1_postal_code(),
         "country": config.contact1_country()
     }
+    
+@pytest.fixture(scope="module")
+def contact_details_2(config):
+    return {
+        "first_name": config.contact2_first_name(),
+        "last_name": config.contact2_last_name(),
+        "birthdate": config.contact2_birthdate(),
+        "email": config.contact2_email(),
+        "phone": config.contact2_phone(),
+        "street1": config.contact2_street1(),
+        "street2": config.contact2_street2(),
+        "city": config.contact2_city(),
+        "state": config.contact2_state(),
+        "postal_code": config.contact2_postal_code(),
+        "country": config.contact2_country()
+    }    

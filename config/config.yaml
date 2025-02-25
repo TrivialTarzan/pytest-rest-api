@@ -13,14 +13,6 @@ ContactList:
     logout_user: "/users/logout"
     delete_contact: "/contacts/"
     delete_user: "/users/me"
-  first_user:
-    token: "${TOKEN}"
-    first_name: "${FIRST_NAME}"
-    last_name: "${LAST_NAME}"
-    email: "${EMAIL}"
-    password: "${PASSWORD}"
-    id: "${ID}"
-
   contact1:
     first_name: "Janusz"
     last_name: "Korwin-Mikke"

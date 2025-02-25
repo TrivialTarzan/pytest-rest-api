@@ -3,6 +3,7 @@ __pycache__
 
 .idea
 .env
+protected.yaml
 
 venv
 desktop.ini

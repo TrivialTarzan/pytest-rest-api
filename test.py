@@ -2,40 +2,29 @@
 This file serves as a testing ground for experimenting with different functions and classes 
 before integrating them into the actual test files
 """
-
-
-from config.config_loader import load
+import sys
+import os
+from config.config_loader import ConfigLoader
 from api_client.api_client import ApiClient
 import requests
 
-config = load()
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-def endpoint1():
-    return config['ContactList']['endpoints']['login_user']
+config = ConfigLoader()
 
-def endpoint2():
-    return config['ContactList']['endpoints']['get_contact_list']
 
-def email():
-    return config['ContactList']['first_user']['first_name']
+api_client = ApiClient()
+url = "https://thinking-tester-contact-list.herokuapp.com"
+endpoint = config.endpoint_login()
+email = config.email()
+password = config.password()
 
-def password():
-    return config['ContactList']['first_user']['password']
+payload = {
+    "email": email, 
+    "password": password
+}
+headers = {}
 
-def base_url():
-    return config['ContactList']['base_url']
-
-print(endpoint1())
-print(email())
-print(password())
-print(base_url())
-
-test = ApiClient()
-url = base_url()
-end = endpoint1()
-end2 = endpoint2()
-
-response = test.get(end2)
+response = api_client.post(endpoint, headers, payload)
 print("Response Status Code:", response.status_code)
-print("Response JSON:", response.json())
-print("Response Text:", response.text) 
+assert response.status_code == 200

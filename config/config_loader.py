@@ -1,37 +1,45 @@
 import yaml
 import os
+from dotenv import load_dotenv
 
 
 class ConfigLoader:
     def __init__(self):
         self.config = self.load()
+        self.config_protected = self.load_protected()
         
     @classmethod
     def load(cls):
         config_path = os.path.join(os.path.dirname(__file__), "config.yaml")
         with open(config_path, "r") as file:
-            return yaml.safe_load(file)       
+            return yaml.safe_load(file)    
+    
+    @classmethod
+    def load_protected(cls):
+        config_path = os.path.join(os.path.dirname(__file__), "protected.yaml")
+        with open(config_path, "r") as file:
+            return yaml.safe_load(file) 
         
-    def endpoint(self) -> str:
+    def endpoint_login(self) -> str:
         return self.config['ContactList']['endpoints']['login_user']
     
     def email(self) -> str:
-        return self.config['ContactList']['first_user']['email']
+        return self.config_protected['my_user']['email']
     
     def password(self) -> str:
-        return self.config['ContactList']['first_user']['password']
+        return self.config_protected['my_user']['password']
     
     def first_name(self) -> str:
-        return self.config['ContactList']['first_user']['first_name']
+        return self.config_protected['my_user']['first_name']
     
     def last_name(self) -> str:
-        return self.config['ContactList']['first_user']['last_name']
+        return self.config_protected['my_user']['last_name']
     
     def id(self) -> str:
-        return self.config['ContactList']['first_user']['id']
+        return self.config_protected['my_user']['id']
     
     def token(self) -> str:
-        return self.config['ContactList']['first_user']['token']
+        return self.config_protected['my_user']['token']
     
     def contact1_first_name(self) -> str:
         return self.config['ContactList']['contact1']['first_name']

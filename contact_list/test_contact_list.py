@@ -5,6 +5,7 @@ from config.config_loader import ConfigLoader
 from api_client.api_client import ApiClient
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+bearer = None
 
 @pytest.fixture(scope="module")
 def config():
@@ -21,6 +22,10 @@ def endpoint_login(config):
 @pytest.fixture(scope="module")
 def endpoint_add_contact(config):
     return config.endpoint_add_contact()
+
+@pytest.fixture(scope="module")
+def endpoint_get_contact_list(config):
+    return config.endpoint_get_contact_list()
 
 @pytest.fixture(scope="module")
 def endpoint_logout(config):
@@ -67,6 +72,8 @@ def test_login(api_client, endpoint_login, user_credentials):
     assert response.status_code == 200
     
     data = response.json()['user']
+    print(data)
+    bearer = data['token']
     
     assert data['email'] == user_credentials["email"]
     assert data['firstName'] == user_credentials["first_name"]
@@ -89,7 +96,7 @@ def test_add_contact(api_client, endpoint_add_contact, contact_details, user_cre
     }
 
     headers = {
-        'Authorization': f'Bearer {user_credentials["token"]}'
+        'Authorization': f'Bearer {bearer}'
     }
         
     response = api_client.post(endpoint_add_contact, headers, payload)
@@ -112,10 +119,24 @@ def test_add_contact(api_client, endpoint_add_contact, contact_details, user_cre
     assert "_id" in response_json
     assert "owner" in response_json
 
+def test_get_contact_list(api_client, endpoint_get_contact_list, user_credentials):
+    payload = {}
+    headers = {
+        'Authorization': f'Bearer {bearer}'
+    }
+    
+    response = api_client.get(endpoint_get_contact_list, headers, payload)
+    data = response.json()
+    
+    assert isinstance(data, list), "Response is not a list"
+    assert data[0]['firstName'] == 'Carlos', f"Expected first name 'Carlos', but got {data[0]['firstName']}"
+    assert data[0]['lastName'].startswith('Gonz'), f"Expected last name to start with 'Gonz', but got {data[0]['lastName']}"
+
+
 def test_logout(api_client, endpoint_logout, user_credentials):
     payload = {}
     headers = {
-        'Authorization': f'Bearer {user_credentials["token"]}'
+        'Authorization': f'Bearer {user_credentials[bearer]}'
     }
     
     api_client.post(endpoint_logout, headers, payload)

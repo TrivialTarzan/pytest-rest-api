@@ -19,9 +19,6 @@ class ConfigLoader:
         config_path = os.path.join(os.path.dirname(__file__), "protected.yaml")
         with open(config_path, "r") as file:
             return yaml.safe_load(file) 
-        
-    def endpoint_login(self) -> str:
-        return self.config['ContactList']['endpoints']['login_user']
     
     def email(self) -> str:
         return self.config_protected['my_user']['email']
@@ -40,6 +37,18 @@ class ConfigLoader:
     
     def token(self) -> str:
         return self.config_protected['my_user']['token']
+    
+    def endpoint_login(self) -> str:
+        return self.config['ContactList']['endpoints']['login_user']
+    
+    def endpoint_add_contact(self) -> str:
+        return self.config['ContactList']['endpoints']['add_contact']
+    
+    def endpoint_add_user(self) -> str:
+        return self.config['ContactList']['endpoints']['add_user']
+    
+    def endpoint_get_contact_list(self) -> str:
+        return self.config['ContactList']['endpoints']['get_contact_list']
     
     def contact1_first_name(self) -> str:
         return self.config['ContactList']['contact1']['first_name']

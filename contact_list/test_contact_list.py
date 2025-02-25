@@ -16,7 +16,7 @@ def api_client():
 
 @pytest.fixture(scope="module")
 def endpoint(config):
-    return config.endpoint()
+    return config.endpoint_login()
 
 @pytest.fixture(scope="module")
 def user_credentials(config):

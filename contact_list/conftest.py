@@ -1,11 +1,45 @@
 import pytest
+import logging
 from config.config_loader import ConfigLoader
 from api_client.api_client import ApiClient
 
-'''
-The fixtures are defined in the conftest.py file and can be used in any test file 
-by passing them as arguments to the test functions.
-'''
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+def login(api_client, endpoint_login, user_credentials):
+    logger.info("Logging in with user credentials: %s", user_credentials["email"])
+    payload = {
+        "email": user_credentials["email"],
+        "password": user_credentials["password"]
+    }
+    headers = {}
+
+    response = api_client.post(endpoint_login, headers, payload)
+    logger.info("Login response status code: %s", response.status_code)
+    assert response.status_code == 200
+    logger.info("Assertion passed: response.status_code == 200")
+
+    token = response.json()['token']
+    logger.info("Received bearer token")
+    return token
+
+def logout(api_client, endpoint_logout, bearer_token):
+    logger.info("Logging out")
+    headers = {
+        'Authorization': f'Bearer {bearer_token}'
+    }
+    response = api_client.post(endpoint_logout, headers, {})
+    logger.info("Logout response status code: %s", response.status_code)
+    assert response.status_code == 200
+    logger.info("Assertion passed: response.status_code == 200")
+
+@pytest.fixture(scope="module", autouse=True)
+def login_and_logout(api_client, endpoint_login, endpoint_logout, user_credentials):
+    bearer_token = login(api_client, endpoint_login, user_credentials)
+
+    yield bearer_token
+
+    logout(api_client, endpoint_logout, bearer_token)
 
 @pytest.fixture(scope="module")
 def config():
@@ -60,7 +94,7 @@ def contact_details_1(config):
         "postal_code": config.contact1_postal_code(),
         "country": config.contact1_country()
     }
-    
+
 @pytest.fixture(scope="module")
 def contact_details_2(config):
     return {
@@ -75,4 +109,4 @@ def contact_details_2(config):
         "state": config.contact2_state(),
         "postal_code": config.contact2_postal_code(),
         "country": config.contact2_country()
-    }    
+    }

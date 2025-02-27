@@ -6,7 +6,7 @@ import sys
 import os
 from config.config_loader import ConfigLoader
 from api_client.api_client import ApiClient
-import requests
+# import requests
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 

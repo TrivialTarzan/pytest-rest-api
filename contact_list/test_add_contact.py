@@ -29,27 +29,27 @@ def test_add_contact(api_client, endpoint_add_contact, contact_details_1, login_
     assert response.status_code == 201
     logger.info("Assertion passed: response.status_code == 201")
     assert response_json["firstName"] == contact_details_1["first_name"]
-    logger.info("Assertion passed: response_json['firstName'] == contact_details_1['first_name']")
+    logger.info(f"Assertion passed: {response_json['firstName']} == {contact_details_1['first_name']}")
     assert response_json["lastName"] == contact_details_1["last_name"]
-    logger.info("Assertion passed: response_json['lastName'] == contact_details_1['last_name']")
+    logger.info(f"Assertion passed: {response_json['lastName']} == {contact_details_1['last_name']}")
     assert response_json["birthdate"] == contact_details_1["birthdate"]
-    logger.info("Assertion passed: response_json['birthdate'] == contact_details_1['birthdate']")
+    logger.info(f"Assertion passed: {response_json['birthdate']} == {contact_details_1['birthdate']}")
     assert response_json["email"] == contact_details_1["email"]
-    logger.info("Assertion passed: response_json['email'] == contact_details_1['email']")
+    logger.info(f"Assertion passed: {response_json['email']} == {contact_details_1['email']}")
     assert response_json["phone"] == contact_details_1["phone"]
-    logger.info("Assertion passed: response_json['phone'] == contact_details_1['phone']")
+    logger.info(f"Assertion passed: {response_json['phone']} == {contact_details_1['phone']}")
     assert response_json["street1"] == contact_details_1["street1"]
-    logger.info("Assertion passed: response_json['street1'] == contact_details_1['street1']")
+    logger.info(f"Assertion passed: {response_json['street1']} == {contact_details_1['street1']}")
     assert response_json["street2"] == contact_details_1["street2"]
-    logger.info("Assertion passed: response_json['street2'] == contact_details_1['street2']")
+    logger.info(f"Assertion passed: {response_json['street2']} == {contact_details_1['street2']}")
     assert response_json["city"] == contact_details_1["city"]
-    logger.info("Assertion passed: response_json['city'] == contact_details_1['city']")
+    logger.info(f"Assertion passed: {response_json['city']} == {contact_details_1['city']}")
     assert response_json["stateProvince"] == contact_details_1["state"]
-    logger.info("Assertion passed: response_json['stateProvince'] == contact_details_1['state']")
+    logger.info(f"Assertion passed: {response_json['stateProvince']} == {contact_details_1['state']}")
     assert response_json["postalCode"] == contact_details_1["postal_code"]
-    logger.info("Assertion passed: response_json['postalCode'] == contact_details_1['postal_code']")
+    logger.info(f"Assertion passed: {response_json['postalCode']} == {contact_details_1['postal_code']}")
     assert response_json["country"] == contact_details_1["country"]
-    logger.info("Assertion passed: response_json['country'] == contact_details_1['country']")
+    logger.info(f"Assertion passed: {response_json['country']} == {contact_details_1['country']}")
     assert "_id" in response_json
     logger.info("Assertion passed: '_id' in response_json")
     assert "owner" in response_json

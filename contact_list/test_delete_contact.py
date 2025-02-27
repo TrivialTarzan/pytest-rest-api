@@ -1,6 +1,3 @@
-bearer = None
-
-
 def test_delete_contact(api_client, endpoint_delete_contact, login_and_logout):
     headers = {
         'Authorization': f'Bearer {login_and_logout}'

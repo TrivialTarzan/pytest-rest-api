@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="2.006" timestamp="2025-02-27T13:15:31.546332+01:00" hostname="DESKTOP-4IVUMCO"><testcase classname="test_show_contacts" name="test_get_contact_list" time="1.952" /></testsuite></testsuites>

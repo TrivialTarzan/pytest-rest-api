@@ -20,6 +20,9 @@ jobs:
       run: |
         ls -la ${{ github.workspace }}
 
+    - name: Create junit directory
+      run: mkdir -p junit
+    
     - uses: actions/checkout@v4
 
     - name: Set up Python 3.12
@@ -46,9 +49,6 @@ jobs:
     - name: Check code formatting with Ruff
       run: ruff format --diff --target-version=py312
       continue-on-error: true
-
-    - name: Create junit directory
-      run: mkdir -p junit
 
     # Run tests, generate coverage and JUnit report
     - name: Test with pytest

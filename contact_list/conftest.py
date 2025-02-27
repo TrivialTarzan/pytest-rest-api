@@ -6,6 +6,12 @@ from api_client.api_client import ApiClient
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+file_handler = logging.FileHandler('test_log.log')
+file_handler.setLevel(logging.INFO)
+file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+
+logger.addHandler(file_handler)
+
 def login(api_client, endpoint_login, user_credentials):
     logger.info("Logging in with user credentials: %s", user_credentials["email"])
     payload = {

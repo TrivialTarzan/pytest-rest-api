@@ -1,0 +1,221 @@
+2025-02-27 13:23:47,235 - INFO - Logging in with user credentials: iza@facts.com
+2025-02-27 13:23:47,868 - INFO - Login response status code: 200
+2025-02-27 13:23:47,869 - INFO - Assertion passed: response.status_code == 200
+2025-02-27 13:23:47,870 - INFO - Received bearer token
+2025-02-27 13:23:48,618 - INFO - Logging out
+2025-02-27 13:23:49,210 - INFO - Logout response status code: 200
+2025-02-27 13:23:49,211 - INFO - Assertion passed: response.status_code == 200
+2025-02-27 13:25:14,368 - INFO - Logging in with user credentials: iza@facts.com
+2025-02-27 13:25:15,019 - INFO - Login response status code: 200
+2025-02-27 13:25:15,020 - INFO - Assertion passed: response.status_code == 200
+2025-02-27 13:25:15,021 - INFO - Received bearer token
+2025-02-27 13:25:15,628 - INFO - Contact 1:
+2025-02-27 13:25:15,630 - INFO - 	_id: 67bdd283ffdf7b0013288b04
+2025-02-27 13:25:15,630 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,686 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,687 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,688 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,691 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,692 - INFO - 	city: Madrid
+2025-02-27 13:25:15,693 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,694 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,695 - INFO - 	country: ES
+2025-02-27 13:25:15,695 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,696 - INFO - 	__v: 0
+2025-02-27 13:25:15,697 - INFO - Contact 2:
+2025-02-27 13:25:15,697 - INFO - 	_id: 67bdd2a7ffdf7b0013288b09
+2025-02-27 13:25:15,698 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,701 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,702 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,702 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,705 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,706 - INFO - 	city: Madrid
+2025-02-27 13:25:15,706 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,707 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,707 - INFO - 	country: ES
+2025-02-27 13:25:15,708 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,709 - INFO - 	__v: 0
+2025-02-27 13:25:15,709 - INFO - Contact 3:
+2025-02-27 13:25:15,710 - INFO - 	_id: 67bddacb8c335500130c4bc7
+2025-02-27 13:25:15,711 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,715 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,716 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,716 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,719 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,720 - INFO - 	city: Madrid
+2025-02-27 13:25:15,720 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,720 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,721 - INFO - 	country: ES
+2025-02-27 13:25:15,722 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,723 - INFO - 	__v: 0
+2025-02-27 13:25:15,723 - INFO - Contact 4:
+2025-02-27 13:25:15,724 - INFO - 	_id: 67be05cdffdf7b0013288c2a
+2025-02-27 13:25:15,725 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,726 - INFO - 	lastName: González
+2025-02-27 13:25:15,726 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,727 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,727 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,728 - INFO - 	street1: Av. de la Constitución 45
+2025-02-27 13:25:15,729 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,730 - INFO - 	city: Madrid
+2025-02-27 13:25:15,730 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,731 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,732 - INFO - 	country: ES
+2025-02-27 13:25:15,733 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,733 - INFO - 	__v: 0
+2025-02-27 13:25:15,734 - INFO - Contact 5:
+2025-02-27 13:25:15,735 - INFO - 	_id: 67be086f8c335500130c4cee
+2025-02-27 13:25:15,736 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,736 - INFO - 	lastName: González
+2025-02-27 13:25:15,737 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,737 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,738 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,738 - INFO - 	street1: Av. de la Constitución 45
+2025-02-27 13:25:15,739 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,740 - INFO - 	city: Madrid
+2025-02-27 13:25:15,740 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,741 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,741 - INFO - 	country: ES
+2025-02-27 13:25:15,742 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,742 - INFO - 	__v: 0
+2025-02-27 13:25:15,743 - INFO - Contact 6:
+2025-02-27 13:25:15,743 - INFO - 	_id: 67c03df2d75d75001361a44c
+2025-02-27 13:25:15,744 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,745 - INFO - 	lastName: González
+2025-02-27 13:25:15,745 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,746 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,747 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,747 - INFO - 	street1: Av. de la Constitución 45
+2025-02-27 13:25:15,748 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,749 - INFO - 	city: Madrid
+2025-02-27 13:25:15,749 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,750 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,750 - INFO - 	country: ES
+2025-02-27 13:25:15,751 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,751 - INFO - 	__v: 0
+2025-02-27 13:25:15,752 - INFO - Contact 7:
+2025-02-27 13:25:15,752 - INFO - 	_id: 67c045e20c01dd00136c6608
+2025-02-27 13:25:15,753 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,753 - INFO - 	lastName: González
+2025-02-27 13:25:15,754 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,754 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,755 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,756 - INFO - 	street1: Av. de la Constitución 45
+2025-02-27 13:25:15,757 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,758 - INFO - 	city: Madrid
+2025-02-27 13:25:15,759 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,759 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,760 - INFO - 	country: ES
+2025-02-27 13:25:15,761 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,761 - INFO - 	__v: 0
+2025-02-27 13:25:15,762 - INFO - Contact 8:
+2025-02-27 13:25:15,763 - INFO - 	_id: 67c046a50c01dd00136c6610
+2025-02-27 13:25:15,764 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,764 - INFO - 	lastName: González
+2025-02-27 13:25:15,765 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,766 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,767 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,767 - INFO - 	street1: Av. de la Constitución 45
+2025-02-27 13:25:15,768 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,768 - INFO - 	city: Madrid
+2025-02-27 13:25:15,769 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,769 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,770 - INFO - 	country: ES
+2025-02-27 13:25:15,771 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,771 - INFO - 	__v: 0
+2025-02-27 13:25:15,772 - INFO - Contact 9:
+2025-02-27 13:25:15,772 - INFO - 	_id: 67c048d4d75d75001361a468
+2025-02-27 13:25:15,773 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,773 - INFO - 	lastName: González
+2025-02-27 13:25:15,774 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,774 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,775 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,775 - INFO - 	street1: Av. de la Constitución 45
+2025-02-27 13:25:15,776 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,776 - INFO - 	city: Madrid
+2025-02-27 13:25:15,778 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,779 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,780 - INFO - 	country: ES
+2025-02-27 13:25:15,780 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,781 - INFO - 	__v: 0
+2025-02-27 13:25:15,781 - INFO - Contact 10:
+2025-02-27 13:25:15,782 - INFO - 	_id: 67c04a1b0c01dd00136c6619
+2025-02-27 13:25:15,783 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,783 - INFO - 	lastName: González
+2025-02-27 13:25:15,784 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,784 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,785 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,785 - INFO - 	street1: Av. de la Constitución 45
+2025-02-27 13:25:15,786 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,786 - INFO - 	city: Madrid
+2025-02-27 13:25:15,787 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,787 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,788 - INFO - 	country: ES
+2025-02-27 13:25:15,788 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,789 - INFO - 	__v: 0
+2025-02-27 13:25:15,789 - INFO - Contact 11:
+2025-02-27 13:25:15,789 - INFO - 	_id: 67c04a52d75d75001361a46d
+2025-02-27 13:25:15,790 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,790 - INFO - 	lastName: González
+2025-02-27 13:25:15,791 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,791 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,792 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,792 - INFO - 	street1: Av. de la Constitución 45
+2025-02-27 13:25:15,793 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,794 - INFO - 	city: Madrid
+2025-02-27 13:25:15,794 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,795 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,796 - INFO - 	country: ES
+2025-02-27 13:25:15,796 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,797 - INFO - 	__v: 0
+2025-02-27 13:25:15,797 - INFO - Contact 12:
+2025-02-27 13:25:15,798 - INFO - 	_id: 67c04b370c01dd00136c661f
+2025-02-27 13:25:15,798 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,799 - INFO - 	lastName: González
+2025-02-27 13:25:15,799 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,800 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,801 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,801 - INFO - 	street1: Av. de la Constitución 45
+2025-02-27 13:25:15,802 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,802 - INFO - 	city: Madrid
+2025-02-27 13:25:15,803 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,803 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,804 - INFO - 	country: ES
+2025-02-27 13:25:15,804 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,804 - INFO - 	__v: 0
+2025-02-27 13:25:15,805 - INFO - Contact 13:
+2025-02-27 13:25:15,805 - INFO - 	_id: 67c04caa0c01dd00136c6621
+2025-02-27 13:25:15,806 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,806 - INFO - 	lastName: González
+2025-02-27 13:25:15,807 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,807 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,808 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,808 - INFO - 	street1: Av. de la Constitución 45
+2025-02-27 13:25:15,809 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,809 - INFO - 	city: Madrid
+2025-02-27 13:25:15,810 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,810 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,811 - INFO - 	country: ES
+2025-02-27 13:25:15,812 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,812 - INFO - 	__v: 0
+2025-02-27 13:25:15,813 - INFO - Contact 14:
+2025-02-27 13:25:15,813 - INFO - 	_id: 67c0506ad75d75001361a477
+2025-02-27 13:25:15,814 - INFO - 	firstName: Carlos
+2025-02-27 13:25:15,814 - INFO - 	lastName: González
+2025-02-27 13:25:15,815 - INFO - 	birthdate: 1985-07-12
+2025-02-27 13:25:15,816 - INFO - 	email: carlos.gonzalez@real.com
+2025-02-27 13:25:15,817 - INFO - 	phone: 555123456
+2025-02-27 13:25:15,817 - INFO - 	street1: Av. de la Constitución 45
+2025-02-27 13:25:15,818 - INFO - 	street2: Piso 3B
+2025-02-27 13:25:15,818 - INFO - 	city: Madrid
+2025-02-27 13:25:15,819 - INFO - 	stateProvince: Madrid
+2025-02-27 13:25:15,819 - INFO - 	postalCode: 28001
+2025-02-27 13:25:15,820 - INFO - 	country: ES
+2025-02-27 13:25:15,820 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-02-27 13:25:15,821 - INFO - 	__v: 0
+2025-02-27 13:25:15,821 - INFO - Assertion passed: Response is a list
+2025-02-27 13:25:15,821 - INFO - Assertion passed: Carlos == 'Carlos'
+2025-02-27 13:25:15,822 - INFO - Assertion passed: data[0]['lastName'].startswith('Gonz')
+2025-02-27 13:25:15,824 - INFO - Logging out
+2025-02-27 13:25:16,414 - INFO - Logout response status code: 200
+2025-02-27 13:25:16,415 - INFO - Assertion passed: response.status_code == 200

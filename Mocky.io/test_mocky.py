@@ -1,4 +1,3 @@
-import yaml
 import requests
 
 BASE_URL = "https://run.mocky.io"
@@ -30,7 +29,7 @@ def test_create_book():
     assert response_json["data"]["genre"] == new_book["genre"]
 
 def test_update_book():
-    book_id = 3
+    # book_id = 3
     updated_data = {
         "price": 42.99,
         "available": False

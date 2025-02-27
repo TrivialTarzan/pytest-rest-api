@@ -2,6 +2,12 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+file_handler = logging.FileHandler('test_log.log')
+file_handler.setLevel(logging.INFO)
+file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+
+logger.addHandler(file_handler)
+
 def test_add_contact(api_client, endpoint_add_contact, contact_details_1, login_and_logout):
     payload = {
         "firstName": contact_details_1["first_name"],

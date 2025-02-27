@@ -33,7 +33,7 @@ def test_logout(api_client, endpoint, token):
     'Authorization': f'Bearer {token}'
     }
     
-    response = api_client.post(endpoint, headers, payload)
+    api_client.post(endpoint, headers, payload)
     
     
 api_client = ApiClient()

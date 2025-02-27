@@ -1,5 +1,3 @@
-import pytest
-
 bearer = None
 
 def test_login(api_client, endpoint_login, user_credentials):

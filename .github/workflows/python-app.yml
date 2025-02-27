@@ -2,7 +2,6 @@
 
 name: pytest-rest-api
 
-# Trigger on push and pull request events to the 'main' branch
 on:
   push:
     branches: [ "main" ]
@@ -17,15 +16,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # List files to verify repository checkout
     - name: List files in the repository
       run: |
-        ls ${{ github.workspace }}
+        ls -la ${{ github.workspace }}
 
-    # Check out the code from the repository
     - uses: actions/checkout@v4
 
-    # Set up Python 3.12
     - name: Set up Python 3.12
       uses: actions/setup-python@v5
       with:
@@ -34,34 +30,34 @@ jobs:
     - name: Display Python version
       run: python -c "import sys; print(sys.version)"
 
-    # Install project dependencies
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install pytest pytest-cov
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    # Install Ruff (for linting & formatting)
     - name: Install Ruff
       run: python -m pip install ruff
 
-    # Run Ruff linting (code quality & static analysis)
+    # check code quality
     - name: Lint code with Ruff
       run: ruff check --output-format=github --target-version=py312
 
-    # Check code formatting (optional - does not fail the workflow)
     - name: Check code formatting with Ruff
       run: ruff format --diff --target-version=py312
       continue-on-error: true
 
-    # Run tests with Pytest and collect coverage
+    - name: Create junit directory
+      run: mkdir -p junit
+
+    # Run tests, generate coverage and JUnit report
     - name: Test with pytest
       run: |
         pytest tests.py --doctest-modules \
                         --junitxml=junit/test-results.xml \
                         --cov=com --cov-report=xml --cov-report=html
 
-    # Upload test results as an artifact
+    # Upload pytest test results as an artifact, even if tests fail
     - name: Upload pytest test results
       uses: actions/upload-artifact@v4
       with:

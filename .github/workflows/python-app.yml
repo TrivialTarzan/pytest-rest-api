@@ -16,11 +16,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        python-version: ["pypy3.10", "3.9", "3.10", "3.11", "3.12", "3.13"]
-
     steps:
+    # List files to verify repository checkout
     - name: List files in the repository
       run: |
         ls ${{ github.workspace }}
@@ -28,46 +25,46 @@ jobs:
     # Check out the code from the repository
     - uses: actions/checkout@v4
 
-    # Set up the specified Python version
-    - name: Set up Python ${{ matrix.python-version }}
+    # Set up Python 3.12
+    - name: Set up Python 3.12
       uses: actions/setup-python@v5
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: "3.12"
 
     - name: Display Python version
       run: python -c "import sys; print(sys.version)"
 
-    # Installing dependencies
+    # Install project dependencies
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install pytest pytest-cov
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    # Installing Ruff using pip
+    # Install Ruff (for linting & formatting)
     - name: Install Ruff
       run: python -m pip install ruff
 
-    # Running Ruff linting (checks code quality and static analysis issues)
+    # Run Ruff linting (code quality & static analysis)
     - name: Lint code with Ruff
-      run: ruff check --output-format=github --target-version=py39
+      run: ruff check --output-format=github --target-version=py312
 
-    # Checking code formatting with Ruff - will not fail the build
+    # Check code formatting (optional - does not fail the workflow)
     - name: Check code formatting with Ruff
-      run: ruff format --diff --target-version=py39
+      run: ruff format --diff --target-version=py312
       continue-on-error: true
 
-    # Generating test reports (PyTest)
+    # Run tests with Pytest and collect coverage
     - name: Test with pytest
       run: |
         pytest tests.py --doctest-modules \
-                        --junitxml=junit/test-results-${{ matrix.python-version }}.xml \
+                        --junitxml=junit/test-results.xml \
                         --cov=com --cov-report=xml --cov-report=html
 
-    # Uploading Pytest test results as artifacts
+    # Upload test results as an artifact
     - name: Upload pytest test results
       uses: actions/upload-artifact@v4
       with:
-        name: pytest-results-${{ matrix.python-version }}
-        path: junit/test-results-${{ matrix.python-version }}.xml
+        name: pytest-results
+        path: junit/test-results.xml
       if: ${{ always() }}

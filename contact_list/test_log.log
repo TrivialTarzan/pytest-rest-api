@@ -45,3 +45,153 @@
 2025-02-27 13:29:53,255 - INFO - Logging out
 2025-02-27 13:29:53,848 - INFO - Logout response status code: 200
 2025-02-27 13:29:53,848 - INFO - Assertion passed: response.status_code == 200
+2025-03-03 15:59:37,041 - INFO - Logging in with user credentials: iza@facts.com
+2025-03-03 15:59:37,787 - INFO - Login response status code: 200
+2025-03-03 15:59:37,787 - INFO - Assertion passed: response.status_code == 200
+2025-03-03 15:59:37,787 - INFO - Received bearer token
+2025-03-03 15:59:38,378 - INFO - Response Status Code: 201
+2025-03-03 15:59:38,378 - INFO - Assertion passed: response.status_code == 201
+2025-03-03 15:59:38,379 - INFO - Assertion passed: Carlos == Carlos
+2025-03-03 15:59:38,379 - INFO - Assertion passed: González == González
+2025-03-03 15:59:38,379 - INFO - Assertion passed: 1985-07-12 == 1985-07-12
+2025-03-03 15:59:38,379 - INFO - Assertion passed: carlos.gonzalez@real.com == carlos.gonzalez@real.com
+2025-03-03 15:59:38,379 - INFO - Assertion passed: 555123456 == 555123456
+2025-03-03 15:59:38,379 - INFO - Assertion passed: Av. de la Constitución 45 == Av. de la Constitución 45
+2025-03-03 15:59:38,380 - INFO - Assertion passed: Piso 3B == Piso 3B
+2025-03-03 15:59:38,380 - INFO - Assertion passed: Madrid == Madrid
+2025-03-03 15:59:38,381 - INFO - Assertion passed: Madrid == Madrid
+2025-03-03 15:59:38,381 - INFO - Assertion passed: 28001 == 28001
+2025-03-03 15:59:38,381 - INFO - Assertion passed: ES == ES
+2025-03-03 15:59:38,382 - INFO - Assertion passed: '_id' in response_json
+2025-03-03 15:59:38,382 - INFO - Assertion passed: 'owner' in response_json
+2025-03-03 15:59:38,386 - INFO - Logging out
+2025-03-03 15:59:39,001 - INFO - Logout response status code: 200
+2025-03-03 15:59:39,001 - INFO - Assertion passed: response.status_code == 200
+2025-03-03 15:59:42,741 - INFO - Logging in with user credentials: iza@facts.com
+2025-03-03 15:59:43,397 - INFO - Login response status code: 200
+2025-03-03 15:59:43,397 - INFO - Assertion passed: response.status_code == 200
+2025-03-03 15:59:43,397 - INFO - Received bearer token
+2025-03-03 15:59:43,994 - INFO - Response Status Code: 201
+2025-03-03 15:59:43,995 - INFO - Assertion passed: response.status_code == 201
+2025-03-03 15:59:43,995 - INFO - Assertion passed: Carlos == Carlos
+2025-03-03 15:59:43,995 - INFO - Assertion passed: González == González
+2025-03-03 15:59:43,995 - INFO - Assertion passed: 1985-07-12 == 1985-07-12
+2025-03-03 15:59:43,996 - INFO - Assertion passed: carlos.gonzalez@real.com == carlos.gonzalez@real.com
+2025-03-03 15:59:43,996 - INFO - Assertion passed: 555123456 == 555123456
+2025-03-03 15:59:43,996 - INFO - Assertion passed: Av. de la Constitución 45 == Av. de la Constitución 45
+2025-03-03 15:59:43,996 - INFO - Assertion passed: Piso 3B == Piso 3B
+2025-03-03 15:59:43,997 - INFO - Assertion passed: Madrid == Madrid
+2025-03-03 15:59:43,997 - INFO - Assertion passed: Madrid == Madrid
+2025-03-03 15:59:43,997 - INFO - Assertion passed: 28001 == 28001
+2025-03-03 15:59:43,997 - INFO - Assertion passed: ES == ES
+2025-03-03 15:59:43,997 - INFO - Assertion passed: '_id' in response_json
+2025-03-03 15:59:43,997 - INFO - Assertion passed: 'owner' in response_json
+2025-03-03 15:59:43,999 - INFO - Logging out
+2025-03-03 15:59:44,624 - INFO - Logout response status code: 200
+2025-03-03 15:59:44,625 - INFO - Assertion passed: response.status_code == 200
+2025-03-03 15:59:47,692 - INFO - Logging in with user credentials: iza@facts.com
+2025-03-03 15:59:48,349 - INFO - Login response status code: 200
+2025-03-03 15:59:48,350 - INFO - Assertion passed: response.status_code == 200
+2025-03-03 15:59:48,350 - INFO - Received bearer token
+2025-03-03 15:59:48,967 - INFO - Response Status Code: 201
+2025-03-03 15:59:48,967 - INFO - Assertion passed: response.status_code == 201
+2025-03-03 15:59:48,968 - INFO - Assertion passed: Carlos == Carlos
+2025-03-03 15:59:48,968 - INFO - Assertion passed: González == González
+2025-03-03 15:59:48,968 - INFO - Assertion passed: 1985-07-12 == 1985-07-12
+2025-03-03 15:59:48,969 - INFO - Assertion passed: carlos.gonzalez@real.com == carlos.gonzalez@real.com
+2025-03-03 15:59:48,969 - INFO - Assertion passed: 555123456 == 555123456
+2025-03-03 15:59:48,969 - INFO - Assertion passed: Av. de la Constitución 45 == Av. de la Constitución 45
+2025-03-03 15:59:48,970 - INFO - Assertion passed: Piso 3B == Piso 3B
+2025-03-03 15:59:48,970 - INFO - Assertion passed: Madrid == Madrid
+2025-03-03 15:59:48,970 - INFO - Assertion passed: Madrid == Madrid
+2025-03-03 15:59:48,970 - INFO - Assertion passed: 28001 == 28001
+2025-03-03 15:59:48,971 - INFO - Assertion passed: ES == ES
+2025-03-03 15:59:48,971 - INFO - Assertion passed: '_id' in response_json
+2025-03-03 15:59:48,971 - INFO - Assertion passed: 'owner' in response_json
+2025-03-03 15:59:48,973 - INFO - Logging out
+2025-03-03 15:59:49,596 - INFO - Logout response status code: 200
+2025-03-03 15:59:49,596 - INFO - Assertion passed: response.status_code == 200
+2025-03-03 15:59:57,719 - INFO - Logging in with user credentials: iza@facts.com
+2025-03-03 15:59:58,464 - INFO - Login response status code: 200
+2025-03-03 15:59:58,465 - INFO - Assertion passed: response.status_code == 200
+2025-03-03 15:59:58,466 - INFO - Received bearer token
+2025-03-03 15:59:59,069 - INFO - Response Status Code: 201
+2025-03-03 15:59:59,069 - INFO - Assertion passed: response.status_code == 201
+2025-03-03 15:59:59,069 - INFO - Assertion passed: Carlos == Carlos
+2025-03-03 15:59:59,069 - INFO - Assertion passed: González == González
+2025-03-03 15:59:59,070 - INFO - Assertion passed: 1985-07-12 == 1985-07-12
+2025-03-03 15:59:59,070 - INFO - Assertion passed: carlos.gonzalez@real.com == carlos.gonzalez@real.com
+2025-03-03 15:59:59,070 - INFO - Assertion passed: 555123456 == 555123456
+2025-03-03 15:59:59,070 - INFO - Assertion passed: Av. de la Constitución 45 == Av. de la Constitución 45
+2025-03-03 15:59:59,071 - INFO - Assertion passed: Piso 3B == Piso 3B
+2025-03-03 15:59:59,071 - INFO - Assertion passed: Madrid == Madrid
+2025-03-03 15:59:59,071 - INFO - Assertion passed: Madrid == Madrid
+2025-03-03 15:59:59,071 - INFO - Assertion passed: 28001 == 28001
+2025-03-03 15:59:59,071 - INFO - Assertion passed: ES == ES
+2025-03-03 15:59:59,071 - INFO - Assertion passed: '_id' in response_json
+2025-03-03 15:59:59,072 - INFO - Assertion passed: 'owner' in response_json
+2025-03-03 15:59:59,073 - INFO - Logging out
+2025-03-03 15:59:59,692 - INFO - Logout response status code: 200
+2025-03-03 15:59:59,692 - INFO - Assertion passed: response.status_code == 200
+2025-03-03 15:59:59,723 - INFO - Logging in with user credentials: iza@facts.com
+2025-03-03 16:00:00,349 - INFO - Login response status code: 200
+2025-03-03 16:00:00,349 - INFO - Assertion passed: response.status_code == 200
+2025-03-03 16:00:00,349 - INFO - Received bearer token
+2025-03-03 16:00:01,571 - INFO - Logging out
+2025-03-03 16:00:02,172 - INFO - Logout response status code: 200
+2025-03-03 16:00:02,172 - INFO - Assertion passed: response.status_code == 200
+2025-03-03 16:00:02,206 - INFO - Logging in with user credentials: iza@facts.com
+2025-03-03 16:00:02,840 - INFO - Login response status code: 200
+2025-03-03 16:00:02,840 - INFO - Assertion passed: response.status_code == 200
+2025-03-03 16:00:02,840 - INFO - Received bearer token
+2025-03-03 16:00:03,472 - INFO - Contact 1:
+2025-03-03 16:00:03,473 - INFO - 	_id: 67c5c3aa1d769b0013cd2a76
+2025-03-03 16:00:03,473 - INFO - 	firstName: Carlos
+2025-03-03 16:00:03,473 - INFO - 	lastName: González
+2025-03-03 16:00:03,474 - INFO - 	birthdate: 1985-07-12
+2025-03-03 16:00:03,474 - INFO - 	email: carlos.gonzalez@real.com
+2025-03-03 16:00:03,474 - INFO - 	phone: 555123456
+2025-03-03 16:00:03,474 - INFO - 	street1: Av. de la Constitución 45
+2025-03-03 16:00:03,474 - INFO - 	street2: Piso 3B
+2025-03-03 16:00:03,474 - INFO - 	city: Madrid
+2025-03-03 16:00:03,475 - INFO - 	stateProvince: Madrid
+2025-03-03 16:00:03,475 - INFO - 	postalCode: 28001
+2025-03-03 16:00:03,475 - INFO - 	country: ES
+2025-03-03 16:00:03,475 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-03-03 16:00:03,475 - INFO - 	__v: 0
+2025-03-03 16:00:03,475 - INFO - Contact 2:
+2025-03-03 16:00:03,476 - INFO - 	_id: 67c5c3af8c2e930013793c67
+2025-03-03 16:00:03,476 - INFO - 	firstName: Carlos
+2025-03-03 16:00:03,476 - INFO - 	lastName: González
+2025-03-03 16:00:03,476 - INFO - 	birthdate: 1985-07-12
+2025-03-03 16:00:03,476 - INFO - 	email: carlos.gonzalez@real.com
+2025-03-03 16:00:03,476 - INFO - 	phone: 555123456
+2025-03-03 16:00:03,477 - INFO - 	street1: Av. de la Constitución 45
+2025-03-03 16:00:03,477 - INFO - 	street2: Piso 3B
+2025-03-03 16:00:03,477 - INFO - 	city: Madrid
+2025-03-03 16:00:03,477 - INFO - 	stateProvince: Madrid
+2025-03-03 16:00:03,477 - INFO - 	postalCode: 28001
+2025-03-03 16:00:03,477 - INFO - 	country: ES
+2025-03-03 16:00:03,477 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-03-03 16:00:03,478 - INFO - 	__v: 0
+2025-03-03 16:00:03,478 - INFO - Contact 3:
+2025-03-03 16:00:03,478 - INFO - 	_id: 67c5c3b98c2e930013793c68
+2025-03-03 16:00:03,478 - INFO - 	firstName: Carlos
+2025-03-03 16:00:03,478 - INFO - 	lastName: González
+2025-03-03 16:00:03,478 - INFO - 	birthdate: 1985-07-12
+2025-03-03 16:00:03,479 - INFO - 	email: carlos.gonzalez@real.com
+2025-03-03 16:00:03,479 - INFO - 	phone: 555123456
+2025-03-03 16:00:03,479 - INFO - 	street1: Av. de la Constitución 45
+2025-03-03 16:00:03,479 - INFO - 	street2: Piso 3B
+2025-03-03 16:00:03,479 - INFO - 	city: Madrid
+2025-03-03 16:00:03,479 - INFO - 	stateProvince: Madrid
+2025-03-03 16:00:03,480 - INFO - 	postalCode: 28001
+2025-03-03 16:00:03,480 - INFO - 	country: ES
+2025-03-03 16:00:03,480 - INFO - 	owner: 67ac97bf39e6930013d52289
+2025-03-03 16:00:03,480 - INFO - 	__v: 0
+2025-03-03 16:00:03,481 - INFO - Assertion passed: Response is a list
+2025-03-03 16:00:03,481 - INFO - Assertion passed: Carlos == 'Carlos'
+2025-03-03 16:00:03,481 - INFO - Assertion passed: data[0]['lastName'].startswith('Gonz')
+2025-03-03 16:00:03,483 - INFO - Logging out
+2025-03-03 16:00:04,083 - INFO - Logout response status code: 200
+2025-03-03 16:00:04,083 - INFO - Assertion passed: response.status_code == 200

@@ -1,4 +1,5 @@
 import logging
+import pytest
 
 logger = logging.getLogger(__name__)
 
@@ -8,6 +9,7 @@ file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(mes
 
 logger.addHandler(file_handler)
 
+@pytest.mark.run(order=4)
 def test_get_contact_list(api_client, endpoint_get_contact_list, login_and_logout):
     payload = {}
     headers = {

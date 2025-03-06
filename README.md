@@ -47,3 +47,77 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+
+## 🐳 Running the Project with Docker
+
+This project is packaged with Docker to make it easy to run the tests, even if you don't have Python installed locally.
+
+### Prerequisites
+
+Make sure you have:
+
+- **Docker Desktop** installed: [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
+- **Windows Subsystem for Linux (WSL 2)** installed and up-to-date (for Windows users).
+
+To install or update WSL:
+
+```bash
+wsl --install
+wsl --update
+```
+
+Building the Docker Image
+
+Clone the repository and navigate to the project directory:
+
+```bash
+git clone <repository_url>
+cd pytest-rest-api
+```
+
+Build the Docker image:
+
+```bash
+docker build -t pytest-rest-api .
+```
+
+Running the Tests Inside the Container
+
+Once the image is built, you can run the tests with:
+
+```bash
+docker run --rm pytest-rest-api
+```
+
+This will:
+
+- Start a container based on the image.
+- Run all the Pytest tests inside the container.
+- Print the test results to the terminal.
+- Automatically remove the container after it finishes.
+
+Optional - Running Tests with Logs Stored on Host
+
+If you want to keep the test logs on your local machine (for easier access), you can mount a volume:
+
+```bash
+docker run --rm -v ${PWD}/test_log.log:/app/test_log.log pytest-rest-api
+```
+
+### Troubleshooting
+
+If you encounter issues with Docker Desktop, especially on Windows, you may need to:
+
+- Ensure Docker Desktop is running.
+- Ensure WSL 2 is installed and up-to-date.
+- Check if the correct WSL backend is enabled in Docker Desktop settings.
+- Restart Docker Desktop if needed.
+
+You can also try resetting Docker’s WSL environment with:
+
+```bash
+wsl --unregister docker-desktop
+wsl --unregister docker-desktop-data
+```
+
+Then restart Docker Desktop to let it recreate these environments.

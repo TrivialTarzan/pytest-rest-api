@@ -1,0 +1,23 @@
+@Host = { "{Host}": "https://thinking-tester-contact-list.herokuapp.com" }
+
+
+GET {{Host}}/api/status
+
+###
+
+@id=0
+GET {{Host}}/api/payment/{{id}}
+
+###
+
+POST {{{{Host}}}}/api/payment
+Content-Type: application/json
+
+{
+  "TransactionType": 5,
+  "Amount": 1231,
+  "ReferenceNo": "8854796",
+  "RequestBy": "FabiCash"
+}
+
+###

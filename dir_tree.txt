@@ -1,0 +1,37 @@
+PYTEST-REST-API
+├── .github
+│   └── workflows
+│       └── python-app.yml
+├── .pytest_cache
+├── api_client
+│   ├── .pytest_cache
+│   ├── api_client.py
+│   └── api.http
+├── config
+│   ├── .pytest_cache
+│   ├── __init__.py
+│   ├── config_loader.py
+│   ├── config.yaml
+│   └── protected.yaml
+├── contact_list
+│   ├── .pytest_cache
+│   ├── __init__.py
+│   ├── API_docs.md
+│   ├── conftest.py
+│   ├── login.py
+│   ├── test_add_contact.py
+│   ├── test_delete_contact.py
+│   ├── test_log.log
+│   └── test_show_contacts.py
+├── Mocky.io
+│   ├── .pytest_cache
+│   ├── __init__.py
+│   ├── API_docs.md
+│   ├── desktop.ini
+│   └── test_mocky.py
+├── __init__.py
+├── .gitignore
+├── README.md
+├── requirements.txt
+├── test_log.log
+└── test.py

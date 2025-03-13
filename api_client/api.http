@@ -14,10 +14,7 @@ POST {{{{Host}}}}/api/payment
 Content-Type: application/json
 
 {
-  "TransactionType": 5,
-  "Amount": 1231,
-  "ReferenceNo": "8854796",
-  "RequestBy": "FabiCash"
+  "RequestBy": ""
 }
 
 ###

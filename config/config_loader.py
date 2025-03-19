@@ -52,6 +52,9 @@ class ConfigLoader:
     def endpoint_add_user(self) -> str:
         return self.config['ContactList']['endpoints']['add_user']
     
+    def endpoint_update_user(self) -> str:
+        return self.config['ContactList']['endpoints']['update_user']
+    
     def endpoint_get_contact_list(self) -> str:
         return self.config['ContactList']['endpoints']['get_contact_list']
     

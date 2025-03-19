@@ -76,6 +76,10 @@ def endpoint_delete_contact(config):
     return config.endpoint_delete_contact()
 
 @pytest.fixture(scope="module")
+def endpoint_update_user(config):
+    return config.endpoint_update_user()
+
+@pytest.fixture(scope="module")
 def user_credentials(config):
     return {
         "email": config.email(),

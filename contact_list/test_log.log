@@ -240,3 +240,54 @@
 2025-03-19 16:28:16,478 - INFO - Logging out
 2025-03-19 16:28:17,033 - INFO - Logout response status code: 200
 2025-03-19 16:28:17,034 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 15:22:47,695 - INFO - Logging in with user credentials: iza@facts.com
+2025-03-20 15:22:48,318 - INFO - Login response status code: 200
+2025-03-20 15:22:48,318 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 15:22:48,319 - INFO - Received bearer token
+2025-03-20 15:23:19,333 - INFO - Logging out
+2025-03-20 15:23:19,904 - INFO - Logout response status code: 200
+2025-03-20 15:23:19,904 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 15:27:23,203 - INFO - Logging in with user credentials: iza@facts.com
+2025-03-20 15:27:23,799 - INFO - Login response status code: 200
+2025-03-20 15:27:23,800 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 15:27:23,800 - INFO - Received bearer token
+2025-03-20 15:27:54,552 - INFO - Logging out
+2025-03-20 15:27:55,124 - INFO - Logout response status code: 200
+2025-03-20 15:27:55,124 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 15:31:47,739 - INFO - Logging in with user credentials: iza@facts.com
+2025-03-20 15:31:48,369 - INFO - Login response status code: 200
+2025-03-20 15:31:48,369 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 15:31:48,370 - INFO - Received bearer token
+2025-03-20 15:31:49,103 - INFO - Logging out
+2025-03-20 15:31:49,611 - INFO - Logout response status code: 200
+2025-03-20 15:31:49,612 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 15:35:15,327 - INFO - Logging in with user credentials: iza@facts.com
+2025-03-20 15:35:15,953 - INFO - Login response status code: 200
+2025-03-20 15:35:15,954 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 15:35:15,955 - INFO - Received bearer token
+2025-03-20 15:35:16,686 - INFO - Logging out
+2025-03-20 15:35:17,194 - INFO - Logout response status code: 200
+2025-03-20 15:35:17,195 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 15:36:50,289 - INFO - Logging in with user credentials: iza@facts.com
+2025-03-20 15:36:50,897 - INFO - Login response status code: 200
+2025-03-20 15:36:50,897 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 15:36:50,897 - INFO - Received bearer token
+2025-03-20 15:36:51,610 - INFO - Logging out
+2025-03-20 15:36:52,146 - INFO - Logout response status code: 200
+2025-03-20 15:36:52,147 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 15:37:06,787 - INFO - Logging in with user credentials: iza@facts.com
+2025-03-20 15:37:07,348 - INFO - Login response status code: 200
+2025-03-20 15:37:07,348 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 15:37:07,349 - INFO - Received bearer token
+2025-03-20 15:37:08,010 - INFO - Logging out
+2025-03-20 15:37:08,534 - INFO - Logout response status code: 200
+2025-03-20 15:37:08,534 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 16:03:40,146 - INFO - Logging in with user credentials: iza@facts.com
+2025-03-20 16:03:40,780 - INFO - Login response status code: 200
+2025-03-20 16:03:40,781 - INFO - Assertion passed: response.status_code == 200
+2025-03-20 16:03:40,781 - INFO - Received bearer token
+2025-03-20 16:03:40,783 - INFO - Payload for PATCH request: {'firstName': 'Bogdan', 'lastName': 'Bogdanov', 'email': 'newmail@yahoo.edu', 'password': '666'}
+2025-03-20 16:03:40,784 - INFO - Headers for PATCH request: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2FjOTdiZjM5ZTY5MzAwMTNkNTIyODkiLCJpYXQiOjE3NDI0ODI5NjR9.Nip0Do04f9H6X9JO1uCL4yhG7V7F7NDwKPSCiKm3_TY'}
+2025-03-20 16:03:41,458 - INFO - Logging out
+2025-03-20 16:03:41,962 - INFO - Logout response status code: 200
+2025-03-20 16:03:41,962 - INFO - Assertion passed: response.status_code == 200

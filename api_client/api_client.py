@@ -31,6 +31,14 @@ class ApiClient:
             print(f"POST request failed: {e}")
             raise
         return response
+    
+    def patch(self, endpoint: str, headers = {}, payload = {}):
+        url = f"{self.BASE_URL}{endpoint}"
+        try:
+            response = requests.patch(url, headers=headers, json=payload)
+            response.raise_for_status()
+        except requests.RequestException as e:
+            print(f"PATCH request failed: {e}")    
 
     def put(self, endpoint: str, data: dict = None):
         url = f"{self.BASE_URL}{endpoint}"
